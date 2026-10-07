@@ -1,0 +1,8 @@
+{
+  "name": "KMI Wire \u0026 Cable - KMI2 - Form Pengambilan \u0026 Kedatangan Barang",
+  "description": "Aplikasi form pengambilan/pemakaian dan kedatangan barang PT KMI Wire and Cable Tbk dengan sinkronisasi Google Sheets, backend API, dan manajemen master data barang \u0026 U/M.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
