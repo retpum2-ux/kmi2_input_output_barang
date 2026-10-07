@@ -22,25 +22,29 @@ export default function App() {
   return (
     <div className="min-h-screen bg-stone-100 flex flex-col font-sans text-stone-900 antialiased selection:bg-blue-600 selection:text-white">
       {/* Main View Area */}
-      <main className="w-full flex-1 flex flex-col">
+      <main className="w-full flex-1 flex flex-col items-center justify-center">
         {currentPage === 'home' && (
-          <div className="flex-1 flex items-center justify-center">
+          <div className="w-full flex-1 flex items-center justify-center p-3 sm:p-6">
             <HomePage onNavigate={setCurrentPage} />
           </div>
         )}
 
         {currentPage === 'pengambilan' && (
-          <PengambilanPage
-            onBack={() => setCurrentPage('home')}
-            onSubmit={handleSubmitForm}
-          />
+          <div className="w-full flex-1 flex flex-col items-center justify-start">
+            <PengambilanPage
+              onBack={() => setCurrentPage('home')}
+              onSubmit={handleSubmitForm}
+            />
+          </div>
         )}
 
         {currentPage === 'kedatangan' && (
-          <KedatanganPage
-            onBack={() => setCurrentPage('home')}
-            onSubmit={handleSubmitForm}
-          />
+          <div className="w-full flex-1 flex flex-col items-center justify-start">
+            <KedatanganPage
+              onBack={() => setCurrentPage('home')}
+              onSubmit={handleSubmitForm}
+            />
+          </div>
         )}
       </main>
     </div>

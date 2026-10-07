@@ -174,26 +174,26 @@ export const KedatanganPage: React.FC<KedatanganPageProps> = ({
   };
 
   return (
-    // Corner layout with rounded elements (melengkung)
-    <div className="w-full flex flex-col items-start justify-start p-2 sm:p-4 animate-in fade-in">
-      {/* Top minimal back control with rounded corner */}
-      <div className="mb-2">
-        <button
-          type="button"
-          onClick={onBack}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-stone-700 bg-white border border-stone-800 rounded-lg hover:bg-stone-100 transition-colors shadow-2xs"
-          title="Kembali ke Halaman Utama"
-        >
-          <ArrowLeft className="w-3.5 h-3.5" />
-          <span>← Kembali</span>
-        </button>
-      </div>
+    <div className="w-full flex-1 flex flex-col items-center justify-start py-4 sm:py-8 px-2 sm:px-4 animate-in fade-in">
+      <div className="w-full max-w-2xl flex flex-col space-y-2 mx-auto">
+        {/* Top minimal back control with rounded corner */}
+        <div className="flex justify-start">
+          <button
+            type="button"
+            onClick={onBack}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-stone-700 bg-white border border-stone-800 rounded-lg hover:bg-stone-100 transition-colors shadow-2xs cursor-pointer"
+            title="Kembali ke Halaman Utama"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>← Kembali</span>
+          </button>
+        </div>
 
-      {/* Main Form Frame with rounded-2xl & Warna Background Lebih Cerah */}
-      <form
-        onSubmit={handleSubmit}
-        className="w-full max-w-2xl bg-[#f5fbf6] border border-stone-800 rounded-2xl shadow-md p-4 sm:p-8 pt-3 sm:pt-4 relative space-y-5"
-      >
+        {/* Main Form Frame with rounded-2xl & Warna Background Lebih Cerah */}
+        <form
+          onSubmit={handleSubmit}
+          className="w-full bg-[#f5fbf6] border border-stone-800 rounded-2xl shadow-md p-4 sm:p-8 pt-3 sm:pt-4 relative space-y-5"
+        >
         {/* ================= 1. BAGIAN JUDUL & HEADER (DI LUAR KOTAK) ================= */}
         {/* Top-left company label - Mepet pojok atas kiri */}
         <div className="text-left text-xs sm:text-sm font-semibold text-stone-600 tracking-wide">
@@ -383,6 +383,7 @@ export const KedatanganPage: React.FC<KedatanganPageProps> = ({
           </div>
         </div>
       </form>
+      </div>
     </div>
   );
 };

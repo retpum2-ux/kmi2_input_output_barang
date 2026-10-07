@@ -6,9 +6,9 @@ interface HomePageProps {
 
 export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
   return (
-    <div className="w-full flex flex-col items-center justify-center p-3 sm:p-6 animate-in fade-in">
+    <div className="w-full flex flex-col items-center justify-center p-2 sm:p-6 animate-in fade-in my-auto">
       {/* Outer Container matching PDF Image 1 */}
-      <div className="w-full max-w-xl bg-[#faeee0] border border-stone-800 shadow-md p-6 sm:p-10 pt-3 sm:pt-4 relative">
+      <div className="w-full max-w-xl bg-[#faeee0] border border-stone-800 shadow-md p-6 sm:p-10 pt-3 sm:pt-4 relative mx-auto">
         {/* Top bar: Left company label & Right KMI2 as requested */}
         <div className="flex items-center justify-between mb-6 sm:mb-8">
           <div className="text-left text-xs sm:text-sm font-semibold text-stone-600 tracking-wide">
