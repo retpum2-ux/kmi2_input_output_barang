@@ -46,7 +46,7 @@ export const KedatanganPage: React.FC<KedatanganPageProps> = ({
       unit: DAFTAR_SATUAN[0]?.code || 'PCS',
       keterangan: '',
       noPR: '',
-      noPE: '',
+      noPO: '',
     },
   ]);
 
@@ -67,7 +67,7 @@ export const KedatanganPage: React.FC<KedatanganPageProps> = ({
         unit: unitsList[0]?.code || 'PCS',
         keterangan: '',
         noPR: '',
-        noPE: '',
+        noPO: '',
       },
     ]);
   };
@@ -130,8 +130,8 @@ export const KedatanganPage: React.FC<KedatanganPageProps> = ({
         alert(`Kolom No P.R. pada Barang ${i + 1} wajib diisi.`);
         return;
       }
-      if (!it.noPE || !it.noPE.trim()) {
-        alert(`Kolom No P.E. pada Barang ${i + 1} wajib diisi.`);
+      if (!it.noPO || !it.noPO.trim()) {
+        alert(`Kolom No P.O. pada Barang ${i + 1} wajib diisi.`);
         return;
       }
     }
@@ -158,7 +158,7 @@ export const KedatanganPage: React.FC<KedatanganPageProps> = ({
             unit: 'KG',
             keterangan: '',
             noPR: '',
-            noPE: '',
+            noPO: '',
           },
         ]);
       }
@@ -328,14 +328,14 @@ export const KedatanganPage: React.FC<KedatanganPageProps> = ({
                   />
                 </div>
 
-                {/* Row 5: No P.E. */}
+                {/* Row 5: No P.O. */}
                 <div>
                   <input
                     type="text"
                     required
-                    value={item.noPE}
-                    onChange={(e) => handleUpdateItem(index, 'noPE', e.target.value)}
-                    placeholder="No P.E."
+                    value={item.noPO}
+                    onChange={(e) => handleUpdateItem(index, 'noPO', e.target.value)}
+                    placeholder="No P.O."
                     className="w-full px-3 py-2 bg-stone-50 border border-stone-800 rounded-lg text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-stone-400 font-mono uppercase"
                   />
                 </div>

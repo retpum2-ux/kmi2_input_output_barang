@@ -41,7 +41,7 @@ export const RecordsHistoryModal: React.FC<RecordsHistoryModalProps> = ({
       'Satuan (U/M)',
       'Keterangan',
       'No P.R.',
-      'No P.E.',
+      'No P.O.',
       'Status Sync Sheets',
     ];
 
@@ -62,7 +62,7 @@ export const RecordsHistoryModal: React.FC<RecordsHistoryModalProps> = ({
           item.unit || '',
           item.keterangan || '',
           rec.type === 'kedatangan' ? (item as any).noPR || '-' : '-',
-          rec.type === 'kedatangan' ? (item as any).noPE || '-' : '-',
+          rec.type === 'kedatangan' ? (item as any).noPO || (item as any).noPE || '-' : '-',
           rec.syncedToSheets ? 'Tersinkron ke Sheets' : 'Lokal',
         ]);
       });
@@ -238,7 +238,7 @@ export const RecordsHistoryModal: React.FC<RecordsHistoryModalProps> = ({
                           {rec.type === 'kedatangan' && (
                             <>
                               <th className="px-3 py-1.5 w-28">No P.R.</th>
-                              <th className="px-3 py-1.5 w-28">No P.E.</th>
+                              <th className="px-3 py-1.5 w-28">No P.O.</th>
                             </>
                           )}
                         </tr>
@@ -264,10 +264,10 @@ export const RecordsHistoryModal: React.FC<RecordsHistoryModalProps> = ({
                             {rec.type === 'kedatangan' && (
                               <>
                                 <td className="px-3 py-1.5 font-mono text-stone-700">
-                                  {item.noPR || '-'}
+                                   {item.noPR || '-'}
                                 </td>
                                 <td className="px-3 py-1.5 font-mono text-stone-700">
-                                  {item.noPE || '-'}
+                                   {item.noPO || item.noPE || '-'}
                                 </td>
                               </>
                             )}

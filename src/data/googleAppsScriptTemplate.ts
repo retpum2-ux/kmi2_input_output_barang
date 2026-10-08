@@ -53,7 +53,7 @@ function setupSheetsIfMissing(ss) {
       'Satuan (U/M)',
       'Keterangan',
       'No P.R.',
-      'No P.E.'
+      'No P.O.'
     ]);
     sheetKedatangan.getRange(1, 1, 1, 10).setFontWeight('bold').setBackground('#e6f4ea');
     sheetKedatangan.setFrozenRows(1);
@@ -134,7 +134,7 @@ function doPost(e) {
           it.unit || '',
           it.keterangan || '',
           it.noPR || '',
-          it.noPE || ''
+          it.noPO || it.noPE || ''
         ]);
       }
 

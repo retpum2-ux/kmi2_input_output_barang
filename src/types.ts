@@ -40,7 +40,8 @@ export interface ItemEntryKedatangan {
   unit: string;
   keterangan: string;
   noPR: string;
-  noPE: string;
+  noPO: string;
+  noPE?: string;
 }
 
 export interface KedatanganFormData {
